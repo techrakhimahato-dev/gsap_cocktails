@@ -1,5 +1,5 @@
 import { navLinks } from '../../constants'
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-                <a href="#home" className="flex items-center gap-2">
+                <a href="#hero" data-animated-button className="flex items-center gap-2">
                     <img src="/images/logo.png" alt="logo" />
                     <p>Velvet Pour</p>
                 </a>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <ul>
                     {navLinks.map((link) => (
                         <li key={link.id}>
-                            <a href={`#${link.id}`}>{link.title}</a>
+                            <a href={`#${link.id}`} data-animated-button>{link.title}</a>
                         </li>
                     ))}
                 </ul>
